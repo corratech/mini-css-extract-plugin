@@ -13,6 +13,9 @@
     },
     "ignoreOrder": {
       "type": "boolean"
+    },
+    "loadPolicy": {
+      "type": "string"
     }
   }
 }

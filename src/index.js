@@ -351,10 +351,11 @@ class MiniCssExtractPlugin {
                   ]),
                   '}',
                   'var linkTag = document.createElement("link");',
-                  'linkTag.rel = "preload";',
+                  // switch to use the option
+                  'linkTag.rel = "prefetch";',
                   'linkTag.as = "style";',
                   'linkTag.type = "text/css";',
-                  'linkTag.onload = resolve;',
+                  'linkTag.onload = function(e){this.rel="stylesheet"; resolve(e)};',
                   'linkTag.onerror = function(event) {',
                   Template.indent([
                     'var request = event && event.target && event.target.src || fullhref;',
