@@ -351,7 +351,6 @@ class MiniCssExtractPlugin {
                   ]),
                   '}',
                   'var linkTag = document.createElement("link");',
-                  // switch to use the option
                   'linkTag.rel = "prefetch";',
                   'linkTag.as = "style";',
                   'linkTag.type = "text/css";',
